@@ -1,7 +1,10 @@
+
 async function checkClaim() {
     const claim = document.getElementById("claimInput").value;
 
-    const response = await fetch("http://127.0.0.1:5000/check", {
+    document.getElementById("result").innerHTML = "Checking... ⏳";
+
+    const response = await fetch("http://16.28.99.25:5000/check", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -11,6 +14,10 @@ async function checkClaim() {
 
     const data = await response.json();
 
-    document.getElementById("result").innerText =
-        `Verdict: ${data.verdict}\nSource: ${data.source}`;
+    document.getElementById("result").innerHTML = `
+        <div class="result-card">
+            <p><strong>Verdict:</strong> ${data.verdict}</p>
+            <p><strong>Source:</strong> ${data.source}</p>
+        </div>
+    `;
 }
