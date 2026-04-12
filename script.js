@@ -4,7 +4,8 @@ async function checkClaim() {
 
     document.getElementById("result").innerHTML = "Checking... ⏳";
 
-    const response = await fetch("http://16.28.99.25:5000/check", {
+    try{
+    const response = await fetch("https://truthlens-backend-5zu1.onrender.com", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -20,4 +21,7 @@ async function checkClaim() {
             <p><strong>Source:</strong> ${data.source}</p>
         </div>
     `;
+    }catch (error) {
+        document.getElementById("result").innerHTML = "Something went wrong ❌";
+    }
 }
