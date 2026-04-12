@@ -5,7 +5,7 @@ async function checkClaim() {
     document.getElementById("result").innerHTML = "Checking... ⏳";
 
     try{
-    const response = await fetch("https://truthlens-backend-5zu1.onrender.com", {
+    const response = await fetch("https://truthlens-backend-5zu1.onrender.com/check", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
