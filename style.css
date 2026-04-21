@@ -1,45 +1,56 @@
 body {
-    font-family: Arial;
-    background-color: #f4f6f8;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
     text-align: center;
-    margin-top: 100px;
-}
-
-h1 {
-    color: #333;
+    padding: 40px;
 }
 
 input {
-    width: 300px;
     padding: 12px;
+    width: 60%;
     border-radius: 8px;
-    border: 1px solid #ccc;
+    border: none;
+    margin-bottom: 10px;
 }
 
 button {
     padding: 12px 20px;
     border: none;
-    background-color: #007BFF;
-    color: white;
     border-radius: 8px;
+    background: #3b82f6;
+    color: white;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background: #2563eb;
 }
 
-#result {
-    margin-top: 30px;
-    font-size: 18px;
-    color: #222;
-}
-
-.result-card {
+.card {
     margin-top: 20px;
-    background: white;
     padding: 20px;
+    background: #1e293b;
     border-radius: 12px;
-    display: inline-block;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.loading {
+    color: #94a3b8;
+}
+
+.icon {
+    margin-right: 6px;
+}
+
+.fa-magnifying-glass {
+    color: #3b82f6;
+    margin-right: 6px;
+}
+
+.fa-hourglass-half {
+    color: #f59e0b;
 }
